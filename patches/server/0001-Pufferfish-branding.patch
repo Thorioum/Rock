@@ -15,7 +15,7 @@ index bcfe59b6efb628ee1e7f9d60667360d4d885fb6a..c65d57f30a1bea059ee38fbceef2a4b9
  dependencies {
 -    implementation(project(":paper-api"))
 -    implementation(project(":paper-mojangapi"))
-+    implementation(project(":pufferfish-api")) // Pufferfish // Paper
++    implementation(project(":rock-api")) // Pufferfish // Paper
 +    // Pufferfish start
 +    implementation("io.papermc.paper:paper-mojangapi:1.19.2-R0.1-SNAPSHOT") {
 +        exclude("io.papermc.paper", "paper-api")
@@ -212,7 +212,7 @@ index 27db614d46dffc2d10f18d79cc5a084f3421d86b..a6ac7dce4bee306be2f173238cb827b5
      @DontObfuscate
      public String getServerModName() {
 -        return "Paper"; // Paper
-+        return "Pufferfish"; // Pufferfish > // Paper
++        return "Rock"; // Pufferfish > // Paper
      }
  
      public SystemReport fillSystemReport(SystemReport details) {
@@ -222,10 +222,10 @@ index c490a29bcf7410bc54959ee71375605964379ed5..d3e948a7f314197851587d86defc9755
 +++ b/src/main/java/org/bukkit/craftbukkit/CraftServer.java
 @@ -266,7 +266,7 @@ import javax.annotation.Nullable; // Paper
  import javax.annotation.Nonnull; // Paper
- 
+
  public final class CraftServer implements Server {
 -    private final String serverName = "Paper"; // Paper
-+    private final String serverName = "Pufferfish"; // Paper // Pufferfish
++    private final String serverName = "Rock"; // Paper // Pufferfish
      private final String serverVersion;
      private final String bukkitVersion = Versioning.getBukkitVersion();
      private final Logger logger = Logger.getLogger("Minecraft");
